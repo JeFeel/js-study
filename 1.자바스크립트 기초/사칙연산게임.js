@@ -39,8 +39,8 @@ while (true) {
     var firstNumber = Math.floor(Math.random() * maxNumber) + 1;
     var secondNumber = Math.floor(Math.random() * maxNumber) + 1;
 
-    // 랜덤 부호를 결정할 정수 생성 : 0, 1, 2
-    var markNum = Math.floor(Math.random() * 3);
+    // 랜덤 부호를 결정할 정수 생성 : 0, 1, 2, 3
+    var markNum = Math.floor(Math.random() * 4);
 
     // 기호를 저장할 변수
     var mark;
@@ -60,9 +60,17 @@ while (true) {
         }
         mark = '-';
         realAnswer = firstNumber - secondNumber;
-    } else {
+    } else if (markNum === 2) {
         mark = 'x';
         realAnswer = firstNumber * secondNumber;
+    } else {
+    if(firstNumber<secondNumber){
+        var temp = firstNumber;
+        firstNumber = secondNumber;
+        secondNumber = temp;
+    }
+    mark = '/';
+    realAnswer = Math.floor(firstNumber / secondNumber);
     }
 
     while (true) {
@@ -108,71 +116,69 @@ alert(`정답 횟수: ${correctCount}회, 틀린 횟수: ${wrongCount}회`);
 //prompt에 0을 입력하면 게임을 종료
 
 //정답, 오답횟수 기록 초기
-var corr=0;
-var fail=0;
-var quizNum = 1;
+// var corr=0;
+// var fail=0;
+// var quizNum = 1;
 
 
-//사칙연산
-var mathSign = Math.floor(Math.random()*4)+1;
-if(mathSign===1){
-  mathSign='+';
-}else if (mathSign===2){
-  mathSign='-';
-}else if (mathSign===3){
-  mathSign='*';
-}else{
-  mathSign='/';
-}
+// //사칙연산
+// var mathSign = Math.floor(Math.random()*4)+1;
+// if(mathSign===1){
+//   mathSign='+';
+// }else if (mathSign===2){
+//   mathSign='-';
+// }else if (mathSign===3){
+//   mathSign='*';
+// }else{
+//   mathSign='/';
+// }
 
 
 
-while(true){
-  var num1 = Math.floor(Math.random()*20)+1;
-  var num2 = Math.floor(Math.random()*20)+1;
-  
+// while(true){
+//   var num1 = Math.floor(Math.random()*20)+1;
+//   var num2 = Math.floor(Math.random()*20)+1;
 
 
-  
-  quizNum++;
-  var ans;
-  if(mathSign===1){
-    ans=num1+num2;
-  }else if(mathSign===2){
-    var max, min;
-    if(num1>num2){
-      max=num1;
-      min=num2;
-    }else{
-      max=num2;
-      min=num1;
-    }
-    ans=max-min;
-  }else if(mathSign===3) {
-    ans=num1*num2;
-  }else{
-    var max, min;
-    if(num1>num2){
-      max=num1;
-      min=num2;
-    }else{
-      max=num2;
-      min=num1;
-    }
-    ans=max/min;
-  }
+//   quizNum++;
+//   var ans;
+//   if(mathSign===1){
+//     ans=num1+num2;
+//   }else if(mathSign===2){
+//     var max, min;
+//     if(num1>num2){
+//       max=num1;
+//       min=num2;
+//     }else{
+//       max=num2;
+//       min=num1;
+//     }
+//     ans=max-min;
+//   }else if(mathSign===3) {
+//     ans=num1*num2;
+//   }else{
+//     var max, min;
+//     if(num1>num2){
+//       max=num1;
+//       min=num2;
+//     }else{
+//       max=num2;
+//       min=num1;
+//     }
+//     ans=max/min;
+//   }
 
-  var quiz = +prompt(`Q${quizNum}. ${num1} ${mathSign} ${num2} = ??`);
-  if(ans===quiz){
-    alert(`정답입니다!`);
-    corr++;
-  }else if(quiz===0){
-      alert(`게임을 종료합니다\n정답횟수: ${corr}회, 오답횟수: ${fail}회`);
-      break;
-  }else{
-      alert(`틀렸습니다`);
-      fail++;
-  };
+//   var quiz = +prompt(`Q${quizNum}. ${num1} ${mathSign} ${num2} = ??`);
+//   if(ans===quiz){
+//     alert(`정답입니다!`);
+//     corr++;
+//   }else if(quiz===0){
+//       alert(`게임을 종료합니다\n정답횟수: ${corr}회, 오답횟수: ${fail}회`);
+//       break;
+//   }else{
+//       alert(`틀렸습니다`);
+//       fail++;
+//   };
 
-};
+// };
 
