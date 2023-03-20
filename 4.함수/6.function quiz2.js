@@ -6,21 +6,21 @@
 
 
 function calcNumbersTotalAndAverage (...num){
-    var addAll = 0;
-    var average = 0;
+    //전달받은 숫자들은 num이라는 이름의 배열에 저장됨
+    var total = 0;
 
     for(var n of num){
-        addAll+=n;
+        total+=n;
     };
-    average=addAll/num.length;
+    var avg=total/num.length;
     
     return {
-        total: addAll,
-        avg: average
+        total,
+        avg
     }
 }
 
-
+//ES6에서 key와 property의 이름이 동일할 경우 하나로 줄여도 됨
 
 
 
