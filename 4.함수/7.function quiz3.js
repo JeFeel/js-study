@@ -25,8 +25,7 @@ function calcBMI(h, w){
    return bmi;
 }
 function round(bmi, number){
-   var BMI = bmi.toFixed(number);
-   return BMI;
+   return bmi.toFixed(number);
 }
 
 var h = 178.4, w = 78.2;
