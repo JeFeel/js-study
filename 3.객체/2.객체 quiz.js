@@ -95,7 +95,7 @@ while (true) {
           alert('비밀번호가 틀렸습니다.');
       }
 
-  } else {
+  } else { //foundUser가 아직 null인 상태라면
       alert('존재하지 않는 회원입니다.');
   }
 
