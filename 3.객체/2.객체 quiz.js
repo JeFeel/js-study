@@ -67,7 +67,7 @@ while (true) {
   // var inputAccount = 'kim1234';
 
   // 회원목록을 반복하여 입력한 계정명과 일치하는 객체를 탐색
-  var foundUser = null; // 로그인 시도하는 회원의 정보객체
+  var foundUser = null; // 로그인 시도하는 해당 회원의 정보객체
 
   for (var user of userList) {
       if (inputAccount === user.account) {
@@ -88,7 +88,7 @@ while (true) {
       // 일단 써바바
       var inputPassword = prompt('비밀번호를 입력하세요!');
 
-      if (inputPassword === foundUser.password) {
+      if (inputPassword === foundUser.password) { //이렇게 처리하면 입력한 회원의 아이디에 대응되는 비밀번호도 비교할 수 있음
           alert(`${foundUser.username}님 환영합니다~~!`);
           break;
       } else {
