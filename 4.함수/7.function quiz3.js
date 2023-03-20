@@ -28,6 +28,20 @@ function round(bmi, roundNum){
    return bmi.toFixed(roundNum);
 }
 
+// 자리수 반올림 함수
+// function round(number, digit) {
+   // number: 5.7788
+   // * 1000 = 5778.8
+   // 반올림 = 5779
+   // / 1000 = 5.779
+
+   // 2째자리까지  Math.round(number * 10 ** 2) / 10 ** 2
+   // 3째자리까지  Math.round(number * 10 ** 3) / 10 ** 3
+   // digit째자리  Math.round(number * 10 ** digit) / 10 ** digit
+
+//    return Math.round(number * 10 ** digit) / 10 ** digit;
+// }
+
 var h = 178.4, w = 78.2;
 var myBmi = calcBMI(h, w);
 
