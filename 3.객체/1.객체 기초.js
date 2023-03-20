@@ -12,8 +12,6 @@ var dog = {
 
 };  //값이기 때문에 뒤에 세미콜론 붙여줘야됨
 
-"hello".slice();
-
 var cat = {
   //property 작성
   name:'콩순이',
@@ -34,7 +32,9 @@ console.log(dog.favorite[0]); //산책
 dog.favorite.push('꼬리 흔들기');
 console.log(dog); 
 
-dog.favorite.slice(1).splice(1,1);
+// cat.kind.splice(1,1); //안 됨
+
+dog.favorite.slice(1).splice(1,1); //메서드 체인
 // {
 //   name: '뽀삐',
 //   kind: '진돗개',
