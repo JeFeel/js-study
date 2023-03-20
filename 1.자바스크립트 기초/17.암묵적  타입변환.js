@@ -3,17 +3,17 @@
 var n1 = 10;
 var n2 = '20';
 
-console.log(n1 + n2);
+console.log(n1 + n2); //1020
 
 var n3 = n1 + '';
-console.log(typeof n3);
+console.log(typeof n3); //string
 
 var n4 = '100' * 55;
-console.log(n4);
+console.log(n4); //5500
 
 
 var n5 = +'99';
-
+console.log(n5); //99
 
 console.log('============================');
 
@@ -25,6 +25,7 @@ if (null) console.log('ok2');
 if (0) console.log('ok3');
 if ("") console.log('ok4');
 if (NaN) console.log('ok5');
+//위는 false라서 다 출력 안 됨
 
 // Truthy
 if (1) console.log('ok6');

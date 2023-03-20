@@ -28,7 +28,7 @@ while(true){
       break;
     };
     
-    arr.push(num);
+    arr.push(num); //위에 적게 되면 '그만'메세지를 pop해야됨
     //arr.push(+num);
 
 };

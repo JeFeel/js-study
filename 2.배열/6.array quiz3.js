@@ -23,7 +23,8 @@ while(true){
     var newName = prompt(`새로운 멤버 이름을 입력하세요`);
 
     // memberList.splice(editTarget, 1, newName);
-    memberList[editTarget]= newName;
+    memberList[editTarget]= newName; 
+    //배열에서 해당 멤버의 인덱스값을 입력하여 바로 대체함
 
     alert(`수정 완료!\n남은 멤버: [${memberList}]`);
     break;
@@ -32,11 +33,6 @@ while(true){
     continue;
   }
   
-  // if(memberList.length===0){
-  //   alert(`모든 멤버가 삭제되었습니다.`);
-  //   break;
-  // }
-
 };
 
 

@@ -4,11 +4,11 @@
 var x = 30, y = 40;
 
 var z = '' + x + y;
-console.log(z);
+console.log(z); //3040
 
 
 var num = Number('hello');
-console.log(num);
+console.log(num); //Nan
 
 
 

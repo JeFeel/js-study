@@ -18,7 +18,7 @@ while(true){
   var deltarget = memberList.indexOf(memberDel); //인덱스값을 가짐
 
   if(memberList.includes(memberDel)){
-    memberList.splice(deltarget, 1);
+    memberList.splice(deltarget, 1); //해당 멤버가 있는 인덱스부터 1개 삭제 --> 해당 멤버를 배열에서 제거
 
     alert(`삭제 완료!\n남은 멤버: [${memberList}]`);
   }else {
