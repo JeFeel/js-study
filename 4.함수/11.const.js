@@ -12,7 +12,8 @@ const kim ={
   age: 25
 };
 
-kim.name = '김칠리';
+kim.name = '김칠리'; //객체의 재할당은 불가능하지만 속성은 변경 가능
+console.log(kim.name); //김칠리
 
 // kim ={
 //   name: '김철수',
@@ -21,6 +22,8 @@ kim.name = '김칠리';
 
 const a = 10;
 const b = 20;
+// b = a;
+// console.log(b); //TypeError: Assignment to constant variable.
 
 for(let i=0;i<5;i++){
   console.log(i);
