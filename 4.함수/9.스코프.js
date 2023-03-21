@@ -7,7 +7,7 @@ function foo(z){
   var y = 20+x; //지역 변수 y : 해당 함수 안에서만 사용가능
   console.log(y-z); 
 
-  var x = '홍길동';
+  var x = '홍길동'; //var를 써버려서 x가 다시 선언됨
   console.log(`지역변수 x 선언후: ${x}`);
 }
 
