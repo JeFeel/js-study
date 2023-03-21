@@ -44,8 +44,8 @@ kim.greeting();
 const pow = n => console.log(`${n}의 제곱: ${n**2}`);
 pow(3);
 
-//함수 선언문과 함수 표현식(화살표함수 포함)의 차이
 console.log('======================');
+//함수 선언문과 함수 표현식(화살표함수 포함)의 차이
 
 function sub(n1,n2) {
   return n1 - n2;
@@ -55,6 +55,8 @@ console.log(`r2: ${r2}`);
 
 
 
-const r3 =divide(30, 6); //함수 호출을 먼저 해버리면 안 됨 
+// const r3 =divide(30, 6); //함수 호출을 먼저 해버리면 안 됨
+//ReferenceError: Cannot access 'divide' before initialization 
 const divide = (n1, n2) => n1 / n2;
+const r3 =divide(30, 6);
 console.log(`r3: ${r3}`);

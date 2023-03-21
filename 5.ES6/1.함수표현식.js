@@ -23,14 +23,14 @@ const sub = function (n1,n2) {
             return n1-n2;
           };   //무명함수는 값이라서 세미콜론 붙여야함
 
-sub(20,10);
+console.log(sub(20,10));
 
 const fArr = [10,'hello'
 , true, {}, [], add
 , function(){console.log('메롱')}
 ];
 
-fArr[6]();
+fArr[6](); //6번째 인덱스가 함수이기 때문에 뒤에 괄호 붙여줘서 작동
 
 const dog = {
   name: '초코',
