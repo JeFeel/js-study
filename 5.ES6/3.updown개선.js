@@ -60,22 +60,28 @@ function inputAnswerAndValidate(gameData){
 }
 //한 게임이 진행되는 함수
 function runUpDownGame(gameData){
+
+  //gameData 디스트럭처링
+  //디스트럭처링은 사본을 복사, 변경해도 원본에 적용x
+
+  const { countDown, secret, answer}  = gameData;
+
   while (true) {
 
     if(!inputAnswerAndValidate(gameData)) continue;
 
     gameData.countDown--;
 
-    if (gameData.secret === gameData.answer) {
-        alert(`정답입니다! ${gameData.initCount - gameData.countDown}번만에 맞췄습니다!`);
+    if (secret === answer) {
+        alert(`정답입니다! ${initCount - countDown}번만에 맞췄습니다!`);
         gameData.gameEndFlag = true;
         break;
-    } else if (gameData.secret > gameData.answer) {
+    } else if (secret > answer) {
         alert(`UP!!`);
-        gameData.minValue = gameData.answer + 1;
+        gameData.minValue = answer + 1;
     } else {
         alert(`DOWN!!`);
-        gameData.maxValue = gameData.answer - 1;
+        gameData.maxValue =answer - 1;
     }
 
     // 추가 게임 종료 조건
