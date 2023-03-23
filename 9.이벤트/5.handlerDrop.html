@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .dropdown {
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      display: flex;
+      flex-direction: column;
+      height: 50%;
+    }
+    .btn{
+      width: 100px;
+      height: 50px;
+      background: darkred;
+      color: antiquewhite;
+      
+    }
+    #drop-content {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 110px;
+      height: 60px;
+      margin: 5px;
+    }
+    #drop-content a{
+      background: #ccc;
+      margin: 3px;
+      text-align: center;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: black;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="dropdown">
+    <button class="btn">Drop</button>
+    <div style="display: none;" id="drop-content">
+      <a href="#">Menu1</a>
+      <a href="#">Menu2</a>
+      <a href="#">Menu3</a>
+      <a href="#">Menu4</a>
+      <a href="#">Menu5</a>
+    </div>
+  </div>
+
+  <script>
+
+    const $dropBtn = document.querySelector('.dropdown');
+    const $dropList = document.querySelector('#drop-content');
+    $dropBtn.onmouseover = () => {
+      $dropList.style.display = 'flex';
+    };
+    $dropBtn.onmouseout = () => {
+      $dropList.style.display = 'none';
+    };
+  </script>
+</body>
+</html>
+<!--  -->

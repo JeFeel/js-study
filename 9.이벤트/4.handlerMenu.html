@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    
+    ul {
+      list-style: none;
+      display: none;
+    }
+
+    .showMenu {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="lunches" class="menu">
+    <i class="fa fa-caret-right" id="caret"></i>
+    <span class="title">추천메뉴(Click Me!)</span>
+    <ul>
+      <li>돈까스</li>
+      <li>군만두</li>
+      <li>볶음밥</li>
+      <li>마파두부</li>
+    </ul>
+  </div>
+
+  <script>
+    const $listMenuButton = document.querySelector('.title');
+    const $dropMenu = document.querySelector('ul');
+    const $rotate = document.querySelector('#caret');
+
+    $listMenuButton.onclick= () => {
+      $dropMenu.classList.toggle('showMenu'); 
+      $rotate.style.transform = "rotate(90deg)";
+      if(!$dropMenu.classList.contains('showMenu')) $rotate.style.transform = "rotate(0deg)";
+    };
+
+  
+    
+  </script>
+</body>
+</html>
