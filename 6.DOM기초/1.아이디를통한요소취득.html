@@ -22,20 +22,27 @@
       const $banana = document.querySelector('#banana');
 
 
-      console.log($banana.attributes.id.value);
+      console.log($banana.attributes.id.value); //banana
 
       // banana.attributes.id.value = '수고요'
 
-      $banana.style.background = 'red';
+      $banana.style.background = 'gold'; 
 
       //id가 grape인 요소노드를 취득하여 
       //배경색상을 violet으로 가로길이를 fit-content 변경
-
       const $grape = document.getElementById('grape');
       $grape.style.background='violet';
       $grape.style.width = 'fit-content';
+      
+      const $peach = document.getElementById('peach');
+      $peach.style.background = 'lightpink';
+      $peach.style.height = '50px';
+      $peach.style.width = 'fit-content';
 
-      document.getele
+      const $apple = document.getElementById('apple');
+      $apple.textContent = 'RedApple';
+      console.log($apple.textContent);  
+
   </script>
 </body>
 </html>

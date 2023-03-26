@@ -24,6 +24,7 @@
       // const $grape = document.querySelector('#fruits > li'); //첫번째가 바뀜
 
       $grape.textContent = '맛있는 포도';
+      console.log($grape.textContent);
 
       //선택자에 해당하는 모든 요소를 취득 
       // const elements = document.querySelectorAll('.fr');
@@ -48,14 +49,13 @@
 
       const [a,b,c,d] = [...document.querySelectorAll('li')];
 
-      d.textContent = '어피치'
+      d.textContent = '청도복숭아'
+      c.textContent = '샤인머스캣'
 
       elements.forEach($li => {
-        $li.style.color = 'blue';
+        $li.style.color = 'green';
       });
 
-      
   </script>
-
 </body>
 </html>
