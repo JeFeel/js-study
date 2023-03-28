@@ -34,8 +34,6 @@ function gameStart(iconCount) {
     checkNumber(e.target);
 
   };
-
-
 }
 
 function checkNumber($target){
