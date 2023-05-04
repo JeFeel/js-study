@@ -17,6 +17,12 @@
       "account": "abc7777",
       "userName": "칠팔구",
       "address": "일이삼"
+    },
+    {
+      "account": "weasley",
+      "userName": "위즐리",
+      "address": "호구와트",
+      "id": 8
     }
   ],
   "boards": []
